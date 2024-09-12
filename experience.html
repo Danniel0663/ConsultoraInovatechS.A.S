@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Experience</title>
+    <style>
+        body {
+            background-color: #fff; /* Fondo blanco para el cuerpo de la página */
+            font-family: Arial, sans-serif;
+            color: #000; /* Letra negra */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .header {
+            width: 100%;
+            background-color: #7B8F74; /* Fondo verde para el título */
+            text-align: center;
+            padding: 20px 0;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            font-size: 48px;
+            color: #fff; /* Letra blanca en el título */
+            margin: 0;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            margin: 20px 0;
+        }
+
+        .box {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 2px solid #000;
+        }
+
+        .image-box {
+            width: 300px;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .text-box {
+            width: 275px;
+            background-color: #f0f0f0;
+            border: 2px solid #000;
+            display: none;
+            padding: 10px;
+            position: absolute;
+            top: 310px;
+        }
+
+        .box:hover .text-box {
+            display: block;
+        }
+
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+
+        .button-container a {
+            text-decoration: none;
+            padding: 10px 20px;
+            background-color: #7B8F74; /* Fondo verde para los botones */
+            color: #fff;
+            font-size: 18px;
+            border-radius: 5px;
+            border: 2px solid #000;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        .button-container a:hover {
+            background-color: #000;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>Experience</h1>
+    </div>
+    
+    <div class="container">
+        <div class="box">
+            <div class="image-box" style="background-image: url('img/td.png');"></div>
+            <div class="text-box">
+                <p>General Electric (GE)</p>
+                <p>Siemens</p>
+                <p>HSBC</p>
+                <p>MinTIC</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box" style="background-image: url('img/cit.png');"></div>
+            <div class="text-box">
+                <p>Asana</p>
+                <p>Zendesk</p>
+                <p>Toggl</p>
+                <p>Trello</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box" style="background-image: url('img/si.png');"></div>
+            <div class="text-box">
+                <p>Coca Cola</p>
+                <p>Stripe</p>
+                <p>Roku</p>
+                <p>Plaid</p>
+            </div>
+        </div>
+        <div class="box">
+            <div class="image-box" style="background-image: url('img/mn.png');"></div>
+            <div class="text-box">
+                <p>HubSpot</p>
+                <p>Slack</p>
+                <p>Eventbrite</p>
+                <p>BigCommerce</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact Us</a>
+    </div>
+</body>
+</html>

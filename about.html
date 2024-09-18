@@ -6,37 +6,137 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>About Us</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        .button-container {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            margin-bottom: 20px;
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
         }
-
-        .button-container a {
-            text-decoration: none;
+        @keyframes moveTitle {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+     
+      
+        header {
+            background-color: #7B8F74;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            animation: moveTitle 3s infinite; /* Añadida la animación */
+        }
+      
+        .btn {
+            display: inline-block;
             padding: 10px 20px;
-            background-color: #7B8F74; /* Fondo verde para los botones */
-            color: #F2F2F2;
-            font-size: 18px;
+            margin: 0 10px;
+            background-color: #5A6B55;
+            color: white;
+            text-decoration: none;
             border-radius: 5px;
-            border: 2px solid #000;
-            transition: background-color 0.3s ease, color 0.3s ease;
+            transition: all 0.3s ease;
         }
+        .btn:hover {
+            background-color: #4A5A46;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .content {
+            display: flex;
+            margin-top: 50px;
+            align-items: center;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .description {
+            flex: 1;
+            padding-left: 30px;
+        }
+        .description p {
+            line-height: 1.8; /* Aumentado el interlineado */
+        }
+        .slogan {
+            font-style: italic;
+            color: #7B8F74;
+            text-align: center;
+            margin-top: 50px;
+            animation: pulse 2s infinite; /* Añadida la animación */
+        }
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .social-icons a {
+            color: #7B8F74;
+            font-size: 24px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #5A6B55;
+        }
+        .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        .button-container a:hover {
-            background-color: #000;
-            color: #F2F2F2;
-        }
+nav {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #5A6B55;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4A5A46;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
     </style>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/estilos.css"> 
 </head>
 
 <body>
-    <section id="acerca-de" class="contenedor sobre-nosotros">
-        <h2 class="titulo">About Us</h2>
+     <header>
+    <div class="container">
+        <h1>About Us</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="services.html" class="btn">Services</a>
+            <a href="experience.html" class="btn">Experience</a>
+            <a href="contact.html" class="btn">Contact us</a>
+        </nav>
+    </div>
+</header>
+
+
+
+
+     <section id="acerca-de" class="contenedor sobre-nosotros">
         <div class="contenedor-sobre-nosotros">
             <div class="contenido-textos">
                 <div class="contenido-texto-imagen">
@@ -49,7 +149,7 @@
                         <div class="hover-text">Leo David Pérez Ramírez<br><br>General Manager of Consultora Inovatech S.A.S., he has five years of experience leading the company to success. His role includes developing strategies, managing resources and promoting innovation.<br><br>
                             He is currently taking an advanced course in technology project management. His ability to transform challenges into opportunities and his commitment to customer satisfaction distinguish him as an exceptional leader.</div>
                         <p class="texto-imagen1"><strong>General manager</strong></p>
-                        <a href="https://www.linkedin.com/in/leo-david-perez-ramirez-017656322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/leo-david-perez-ramirez-017656322?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"  class="linkedin-btn">LinkedIn</a>
                     </div>
                 </div>
                 <div class="contenido-texto-imagen-inverso">
@@ -63,7 +163,7 @@
                     <div class="texto2">
                         <h3><span>2</span>IT Experts</h3>
                         <p>At Consultora Inovatech S.A.S., we have a team of highly trained consultants specialized in various areas of information technology. Our team includes experts in systems architecture, software development, cybersecurity, infrastructure management and cloud solutions, which allows us to offer a comprehensive service tailored to the needs of each client.</p>
-                        <a href="https://www.linkedin.com/in/ferddy-darrell-ria%C3%B1o-salda%C3%B1a-5b4982328?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFHNaKoNQT3SoKS76l8P3gw%3D%3D" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/ferddy-darrell-ria%C3%B1o-salda%C3%B1a-5b4982328?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3BFHNaKoNQT3SoKS76l8P3gw%3D%3D" target="_blank"  class="linkedin-btn">LinkedIn</a>
                     </div>
                 </div>
                 <div class="contenido-texto-imagen">
@@ -77,7 +177,7 @@
 
                             <br><br>He is currently taking an advanced course in financial analysis. His ability to optimize financial processes and his commitment to the economic stability of the company make him an essential leader.</div>
                         <p class="texto-imagen3"><strong>Chief Financial Officer</strong></p>
-                        <a href="https://www.linkedin.com/in/danniel-alejandro-parra-chavarro-335135322/" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/danniel-alejandro-parra-chavarro-335135322/" target="_blank"  class="linkedin-btn">LinkedIn</a>
                     </div>
                 </div>
 
@@ -92,7 +192,7 @@
                     <div class="texto2">
                         <h3><span>4</span>Safety and Efficiency</h3>
                         <p>At Consultora Inovatech S.A.S., we understand that security and efficiency are critical to the success of any business in today's digital environment. Our services are designed to ensure that your company's technological systems and processes operate optimally, while protecting themselves from increasing cyber threats.</p>
-                        <a href="https://www.linkedin.com/in/jose-luis-sabogal-monroy-962540328/" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/jose-luis-sabogal-monroy-962540328/" target="_blank"  class="linkedin-btn">LinkedIn</a>
                     </div>
                 </div>                    
                 <div class="contenido-texto-imagen">
@@ -106,18 +206,13 @@
 
                             <br><br>He is currently taking an advanced course in sales and marketing strategies. His ability to drive business growth and focus on customer satisfaction make him a crucial leader for the company's success.</div>
                         <p class="texto-imagen5"><strong>Commercial Director</strong></p>
-                        <a href="https://www.linkedin.com/in/juan-david-ramirez-valero-997497328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank">LinkedIn</a>
+                        <a href="https://www.linkedin.com/in/juan-david-ramirez-valero-997497328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank"  class="linkedin-btn">LinkedIn</a>
                     </div>
                 </div>                    
             </div>
         </div>
     </section>
-    <div class="button-container">
-        <a href="index.html">Home</a>
-        <a href="services.html">Services</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
-    </div>
+   
 </body>
 
 </html>

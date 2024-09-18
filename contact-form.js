@@ -9,31 +9,31 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         user_email: correo,
         message: solicitud,
         from_name: correo, // Nombre o email del usuario
-        to_name: "Consultora Inovatech"   // Tu nombre o el nombre de la empresa
+        to_name: "InovaTech Consultancy"   // Tu nombre o el nombre de la empresa
     };
 
     // Parámetros para enviar el correo al usuario
     const templateParamsToUser = {
         user_email: correo,
-        message: "Gracias por contactarnos. Hemos recibido tu solicitud y pronto nos pondremos en contacto.",
-        from_name: "Consultora Inovatech",  // Tu empresa
+        message: solicitud,
+        from_name: "InovaTech Consultancy",  // Tu empresa
         to_name: correo   // Email del usuario
     };
 
     // Enviar el correo a tu cuenta
     emailjs.send('service_o7l8mvc', 'template_sl6cxnj', templateParamsToAdmin)
         .then(function(response) {
-            console.log('Correo a admin enviado correctamente', response.status, response.text);
+            console.log('Email to admin sent success fully', response.status, response.text);
         }, function(error) {
-            console.error('Error al enviar el correo a admin:', error);
+            console.error('Error sending email to admin:', error);
         });
 
     // Enviar el correo de confirmación al usuario
     emailjs.send('service_o7l8mvc', 'template_sdqv7fj', templateParamsToUser)
         .then(function(response) {
-            alert('Correo enviado correctamente, pronto nos pondremos en contacto.');
+            alert('Mail sent correctly, we will contact you soon.');
         }, function(error) {
-            console.error('Error al enviar el correo al usuario:', error);
-            alert('Ocurrió un error al enviar el correo.');
+            console.error('Error sending email to user:', error);
+            alert('An error occurred while sending the email.');
         });
 });

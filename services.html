@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Services</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .button-container {
             display: flex;
@@ -29,6 +30,114 @@
             background-color: #000;
             color: #F2F2F2;
         }
+
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+            100% { transform: scale(1); }
+        }
+        @keyframes moveTitle {
+            0% { transform: translateX(0); }
+            50% { transform: translateX(20px); }
+            100% { transform: translateX(0); }
+        }
+     
+      
+        header {
+            background-color: #7B8F74;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+        h1 {
+            margin: 0;
+            animation: moveTitle 3s infinite; /* Añadida la animación */
+        }
+      
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            margin: 0 10px;
+            background-color: #5A6B55;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #4A5A46;
+            transform: translateY(-3px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+        }
+        .content {
+            display: flex;
+            margin-top: 50px;
+            align-items: center;
+        }
+        .hero-image {
+            flex: 1;
+            text-align: center;
+        }
+        .hero-image img {
+            max-width: 300px;
+            height: auto;
+            border-radius: 10px;
+        }
+        .description {
+            flex: 1;
+            padding-left: 30px;
+        }
+        .description p {
+            line-height: 1.8; /* Aumentado el interlineado */
+        }
+        .slogan {
+            font-style: italic;
+            color: #7B8F74;
+            text-align: center;
+            margin-top: 50px;
+            animation: pulse 2s infinite; /* Añadida la animación */
+        }
+        .social-icons {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+        }
+        .social-icons a {
+            color: #7B8F74;
+            font-size: 24px;
+            margin-left: 10px;
+            transition: color 0.3s ease;
+        }
+        .social-icons a:hover {
+            color: #5A6B55;
+        }
+        .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+nav {
+    margin-top: 20px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    background-color: #5A6B55;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #4A5A46;
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
     </style>
     <link rel="shortcut icon" href="img/Logo.png" type="image/x-icon">
     <link rel="stylesheet" href="css/estilos.css">
@@ -36,9 +145,21 @@
 </head>
 
 <body>
+
+     <header>
+    <div class="container">
+        <h1>Our Solutions</h1>
+        <nav>
+            <a href="index.html" class="btn">Home</a>
+            <a href="about.html" class="btn">About us</a>
+            <a href="experience.html" class="btn">Experience</a>
+            <a href="contact.html" class="btn">Contact us</a>
+        </nav>
+    </div>
+</header>
     <section id="servicios" class="portafolio">
         <div class="contenedor">
-            <h2 class="titulo">Our Services</h2>
+            <h2 class="titulo">Our company provides the following solutions to our clients' problems:</h2>
             <div class="galeria-port">
                 <div class="imagen-port">
                     <img src="img/td.png" alt="Transformación Digital">
@@ -111,12 +232,7 @@
             </div>
         </div>
     </section>
-    <div class="button-container">
-        <a href="index.html">Home</a>
-        <a href="about.html">About Us</a>
-        <a href="experience.html">Experience</a>
-        <a href="contact.html">Contact</a>
-    </div>
+   
     <script src="script.js"></script>
 </body>
 

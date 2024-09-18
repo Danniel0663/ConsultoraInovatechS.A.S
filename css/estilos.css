@@ -25,20 +25,7 @@ body {
 
 /* Header */
 
-header {
-    width: 100%;
-    height: 600px;
-    background: #d64040;
-    background: linear-gradient(to right, hsla(135, 25%, 36%, 0.788), hsla(135, 25%, 36%, 0.788)), url(../img/Top.png);
-    background-size: cover;
-    background-attachment: fixed;
-    position: relative;
-}
 
-nav {
-    text-align: right;
-    padding: 30px 50px 0 0;
-}
 
 nav > a {
     color: #fff;
@@ -222,22 +209,84 @@ nav > a:hover {
 
 .imagen-lado-derecho img {
     max-width: 500%;
+    max-width: 100%;
     height: auto;
-    display: block;
-    margin: auto; /* Asegura que las imágenes estén centradas */
+    margin-left: 200px;
 }
 
 .imagen-lado-izquierdo img {
     max-width: 100%;
     height: auto;
-    display: block;
-    margin: auto; /* Asegura que las imágenes estén centradas */
+    margin-left: 180px;
 }
 
 /* Cambiar la disposición cuando la imagen esté a la izquierda */
 .contenido-inverso {
     flex-direction: row-reverse;
 }
+
+.contenido-texto-imagen:nth-child(odd) {
+    background-color: rgba(123, 143, 116, 0.1); /* Color más claro */
+}
+
+.contenido-texto-imagen-inverso:nth-child(even) {
+    background-color: rgba(123, 143, 116, 0.2); /* Color más opaco */
+}
+
+.contenido-texto-imagen-inverso, .contenido-texto-imagen {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.imagen-lado-derecho img, .imagen-lado-izquierdo img {
+    max-width: 200px;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+
+/* Estilo básico del botón de LinkedIn */
+a.linkedin-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-top: 10px;
+    background-color: #0077B5; /* Color azul de LinkedIn */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Animación al hacer hover */
+a.linkedin-btn:hover {
+    background-color: #005983; /* Color más oscuro al hacer hover */
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animación suave en el fondo */
+a.linkedin-btn::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 300%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    transition: all 0.4s ease-in-out;
+}
+
+a.linkedin-btn:hover::before {
+    left: 100%;
+}
+
 
 /* Responsividad */
 
@@ -436,10 +485,19 @@ footer {
     text-decoration: underline; /* Subraya los enlaces cuando el mouse pasa sobre ellos */
 }
 .titulo {
-    color: #ffffff; /* Cambia el color del título "Contact" a blanco */
+    color: #000000; /* Cambia el color del título "Contact" a blanco */
     text-align: center;
     font-size: 24px; /* Mantiene el tamaño del título */
     margin-bottom: 40px; /* Margen debajo del título */
+
+}
+
+.titulo2 {
+    color: white; /* Cambia el color del título "Contact" a blanco */
+    text-align: center;
+    font-size: 24px; /* Mantiene el tamaño del título */
+    margin-bottom: 40px; /* Margen debajo del título */
+    
 }
 
 .titulo-final {
@@ -602,6 +660,8 @@ footer {
         font-size: 20px; /* Ajusta el tamaño del título en pantallas más pequeñas */
     }
 }
+
+
 
 
 @media screen and (max-width:500px) {
